@@ -1,0 +1,208 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #213547;
+  background-color: #f8f9fa;
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#app {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.calculator-container {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  color: #2563eb;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: #64748b;
+}
+
+.calculator-form {
+  display: grid;
+  gap: 2rem;
+}
+
+.service-group {
+  border-radius: 8px;
+  background-color: #f8fafc;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.service-group h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #334155;
+}
+
+.form-control {
+  margin-bottom: 1rem;
+}
+
+.pricing-info {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+/* Sliders */
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: #dbeafe;
+  outline: none;
+  margin: 10px 0;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #2563eb;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  background: #1d4ed8;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #2563eb;
+  cursor: pointer;
+  border: none;
+}
+
+/* Radio buttons */
+.radio-group, .checkbox-group {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.radio-option, .checkbox-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  accent-color: #2563eb;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.radio-option label, .checkbox-option label {
+  cursor: pointer;
+}
+
+/* Price summary */
+.price-summary {
+  margin-top: 2rem;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.price-breakdown h3 {
+  margin-bottom: 1rem;
+  color: #334155;
+}
+
+.price-breakdown ul {
+  list-style: none;
+}
+
+.price-breakdown li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+.price-breakdown .item-name {
+  color: #64748b;
+}
+
+.price-breakdown .item-price {
+  font-weight: 600;
+}
+
+.total-price {
+  text-align: center;
+  background-color: #f1f5f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.total-price h2 {
+  color: #334155;
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+@media (max-width: 768px) {
+  .price-summary {
+    grid-template-columns: 1fr;
+  }
+  
+  #app {
+    padding: 1rem;
+  }
+}

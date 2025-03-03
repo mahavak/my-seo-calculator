@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEO Freelancer Pricing Calculator</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="calculator-container">
+        <header>
+          <h1>SEO Pricing Calculator</h1>
+          <p>Estimate your project cost based on services needed</p>
+        </header>
+        
+        <div class="calculator-form">
+          <div class="service-group">
+            <h2>Page Optimization</h2>
+            
+            <div class="form-control">
+              <label for="pageCount">Number of Pages: <span id="pageCountValue">5</span></label>
+              <input type="range" id="pageCount" min="1" max="50" value="5" class="slider">
+            </div>
+            
+            <div class="pricing-info">
+              <span>$50 per page</span>
+            </div>
+          </div>
+          
+          <div class="service-group">
+            <h2>Keyword Research</h2>
+            
+            <div class="form-control radio-group">
+              <div class="radio-option">
+                <input type="radio" id="kwBasic" name="keywordResearch" value="basic" checked>
+                <label for="kwBasic">Basic ($200)</label>
+              </div>
+              
+              <div class="radio-option">
+                <input type="radio" id="kwStandard" name="keywordResearch" value="standard">
+                <label for="kwStandard">Standard ($500)</label>
+              </div>
+              
+              <div class="radio-option">
+                <input type="radio" id="kwAdvanced" name="keywordResearch" value="advanced">
+                <label for="kwAdvanced">Advanced ($1,000)</label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="service-group">
+            <h2>Link Building</h2>
+            
+            <div class="form-control">
+              <label for="linkCount">Number of Quality Backlinks: <span id="linkCountValue">5</span></label>
+              <input type="range" id="linkCount" min="0" max="20" value="5" class="slider">
+            </div>
+            
+            <div class="pricing-info">
+              <span>$150 per quality backlink</span>
+            </div>
+          </div>
+          
+          <div class="service-group">
+            <h2>Additional Services</h2>
+            
+            <div class="form-control checkbox-group">
+              <div class="checkbox-option">
+                <input type="checkbox" id="technicalAudit" value="technicalAudit">
+                <label for="technicalAudit">Technical SEO Audit ($500)</label>
+              </div>
+              
+              <div class="checkbox-option">
+                <input type="checkbox" id="contentCreation" value="contentCreation">
+                <label for="contentCreation">Content Creation Strategy ($750)</label>
+              </div>
+              
+              <div class="checkbox-option">
+                <input type="checkbox" id="localSEO" value="localSEO">
+                <label for="localSEO">Local SEO Optimization ($350)</label>
+              </div>
+              
+              <div class="checkbox-option">
+                <input type="checkbox" id="competitorAnalysis" value="competitorAnalysis">
+                <label for="competitorAnalysis">Competitor Analysis ($400)</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="price-summary">
+          <div class="price-breakdown">
+            <h3>Price Breakdown</h3>
+            <ul id="priceBreakdown">
+              <!-- Populated by JavaScript -->
+            </ul>
+          </div>
+          
+          <div class="total-price">
+            <h2>Estimated Total</h2>
+            <div class="price" id="totalPrice">$0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
